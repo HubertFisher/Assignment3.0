@@ -3,44 +3,52 @@ package com.company.car;
 import com.company.details.Engine;
 
 public class Car {
-private static double VIN;
-public String color;
-private static String originalColor;
-private static int yearOfProduction;
+    private  double VIN;
+    public String color;
+    private  String originalColor;
+    private int yearOfProduction;
+    private final Engine engine;
 
-private final Engine engine;
+        public Car(Engine engine, double VIN, String color, String originalColor, int yearOfProduction) {
+            setVIN(VIN);
+            setOriginalColor(originalColor);
+            setYearOfProduction(yearOfProduction);
+            setColor(color);
+            this.engine=engine;
 
-    public Car(Engine engine, double VIN, String color, String originalColor, int yearOfProduction) {
-        this.color = color;
-        this.engine = engine;
-        Car.VIN =VIN;
-        Car.originalColor = originalColor;
-        Car.yearOfProduction =yearOfProduction;
-
-    }
-
+        }
     //setters
-    public void setColor(String color) {
+        public void setVIN(double VIN) {
+            this.VIN = VIN;
+        }
+        public void setOriginalColor(String originalColor) {
+            this.originalColor = originalColor;
+        }
+
+        public void setYearOfProduction(int yearOfProduction) {
+            this.yearOfProduction = yearOfProduction;
+        }
+        public void setColor(String color) {
         this.color = color;
     }
-//getters
-    public static double getVIN() {
+    //getters
+        public  double getVIN() {
         return VIN;
     }
 
-    public String getColor() {
+        public String getColor() {
         return color;
     }
 
-    public static String getOriginalColor() {
+        public  String getOriginalColor() {
         return originalColor;
     }
 
-    public int getYearOfProduction() {
+        public int getYearOfProduction() {
         return yearOfProduction;
     }
 
-    public Engine getEngine() {
+        public Engine getEngine() {
         return engine;
     }
 }
