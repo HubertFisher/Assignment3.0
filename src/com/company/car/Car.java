@@ -1,21 +1,26 @@
 package com.company.car;
 
-import com.company.details.Engine;
+import com.company.details.engine.Engine;
+import com.company.details.transmission.Transmission;
 
 public class Car {
-private static double VIN;
-public String color;
-private static String originalColor;
-private static int yearOfProduction;
+    private double price;
+    private int numberOfSeats;
+    private String name;
+    private double VIN;
+    private String color;
+    private int yearOfProduction;
 
-private final Engine engine;
+    private final Engine engine;
+    private final Transmission transmission;
 
-    public Car(Engine engine, double VIN, String color, String originalColor, int yearOfProduction) {
+    public Car(String name,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
+        this.name = name;
         this.color = color;
+        this.transmission = transmission;
         this.engine = engine;
-        Car.VIN =VIN;
-        Car.originalColor = originalColor;
-        Car.yearOfProduction =yearOfProduction;
+        this.VIN =VIN;
+        this.yearOfProduction =yearOfProduction;
 
     }
 
@@ -23,17 +28,36 @@ private final Engine engine;
     public void setColor(String color) {
         this.color = color;
     }
-//getters
-    public static double getVIN() {
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+
+    }
+    public void setNumberOfSeats(int numberOfSeats) {
+        this.numberOfSeats = numberOfSeats;
+    }
+
+
+    //getters
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getVIN() {
         return VIN;
     }
 
     public String getColor() {
         return color;
-    }
-
-    public static String getOriginalColor() {
-        return originalColor;
     }
 
     public int getYearOfProduction() {
