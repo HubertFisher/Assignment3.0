@@ -4,6 +4,7 @@ import com.company.details.engine.Engine;
 import com.company.details.transmission.Transmission;
 
 public class Car {
+
     private double price;
     private int numberOfSeats;
     private String name;
@@ -24,10 +25,22 @@ public class Car {
 
     }
 
+
     //setters
-    public void setColor(String color) {
+        public void setVIN(double VIN) {
+            this.VIN = VIN;
+        }
+        public void setOriginalColor(String originalColor) {
+            this.originalColor = originalColor;
+        }
+
+        public void setYearOfProduction(int yearOfProduction) {
+            this.yearOfProduction = yearOfProduction;
+        }
+        public void setColor(String color) {
         this.color = color;
     }
+
 
     public void setPrice(double price) {
         this.price = price;
@@ -53,18 +66,20 @@ public class Car {
     }
 
     public double getVIN() {
+
         return VIN;
     }
 
-    public String getColor() {
+        public String getColor() {
         return color;
     }
 
     public int getYearOfProduction() {
+
         return yearOfProduction;
     }
 
-    public Engine getEngine() {
+        public Engine getEngine() {
         return engine;
     }
 }
