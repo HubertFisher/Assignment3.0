@@ -1,22 +1,31 @@
 package com.company.car;
 
-import com.company.details.Engine;
+import com.company.details.engine.Engine;
+import com.company.details.transmission.Transmission;
 
 public class Car {
-    private  double VIN;
-    public String color;
-    private  String originalColor;
+
+    private double price;
+    private int numberOfSeats;
+    private String name;
+    private double VIN;
+    private String color;
     private int yearOfProduction;
+
     private final Engine engine;
+    private final Transmission transmission;
 
-        public Car(Engine engine, double VIN, String color, String originalColor, int yearOfProduction) {
-            setVIN(VIN);
-            setOriginalColor(originalColor);
-            setYearOfProduction(yearOfProduction);
-            setColor(color);
-            this.engine=engine;
+    public Car(String name,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
+        this.name = name;
+        this.color = color;
+        this.transmission = transmission;
+        this.engine = engine;
+        this.VIN =VIN;
+        this.yearOfProduction =yearOfProduction;
 
-        }
+    }
+
+
     //setters
         public void setVIN(double VIN) {
             this.VIN = VIN;
@@ -31,8 +40,33 @@ public class Car {
         public void setColor(String color) {
         this.color = color;
     }
+
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+
+    }
+    public void setNumberOfSeats(int numberOfSeats) {
+        this.numberOfSeats = numberOfSeats;
+    }
+
+
     //getters
-        public  double getVIN() {
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getVIN() {
+
         return VIN;
     }
 
@@ -40,11 +74,8 @@ public class Car {
         return color;
     }
 
-        public  String getOriginalColor() {
-        return originalColor;
-    }
+    public int getYearOfProduction() {
 
-        public int getYearOfProduction() {
         return yearOfProduction;
     }
 
