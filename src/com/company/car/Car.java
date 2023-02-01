@@ -15,44 +15,37 @@ public class Car {
     private final Engine engine;
     private final Transmission transmission;
 
-    public Car(String name,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
-        this.name = name;
-        this.color = color;
-        this.transmission = transmission;
-        this.engine = engine;
-        this.VIN =VIN;
-        this.yearOfProduction =yearOfProduction;
-
+    public Car(String name,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction, double price, int numberOfSeats) {
+        setName(name);
+        setVIN(VIN);
+        setColor(color);
+        setYearOfProduction(yearOfProduction);
+        setPrice(price);
+        setNumberOfSeats(numberOfSeats);
+        this.engine=engine;
+        this.transmission=transmission;
     }
 
 
     //setters
-        public void setVIN(double VIN) {
+
+    public void setVIN(double VIN) {
             this.VIN = VIN;
         }
-        public void setYearOfProduction(int yearOfProduction) {
-            this.yearOfProduction = yearOfProduction;
-        }
-        public void setColor(String color) {
+    public void setYearOfProduction(int yearOfProduction) {this.yearOfProduction = yearOfProduction;}
+    public void setColor(String color) {
         this.color = color;
     }
-
-
     public void setPrice(double price) {
         this.price = price;
     }
-
-    public void setName(String name) {
-        this.name = name;
-
-    }
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
-
+    public void setName(String name) {this.name = name;}
+    public void setNumberOfSeats(int numberOfSeats) {this.numberOfSeats = numberOfSeats;}
 
     //getters
 
+    public String getName() {return name;}
+    public Transmission getTransmission() {return transmission;}
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
@@ -61,21 +54,15 @@ public class Car {
         return price;
     }
 
-    public double getVIN() {
+    public double getVIN() {return VIN;}
 
-        return VIN;
-    }
-
-        public String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public int getYearOfProduction() {
+    public int getYearOfProduction() {return yearOfProduction;}
 
-        return yearOfProduction;
-    }
-
-        public Engine getEngine() {
+    public Engine getEngine() {
         return engine;
     }
 }
