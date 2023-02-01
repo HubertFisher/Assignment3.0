@@ -30,10 +30,6 @@ public class Car {
         public void setVIN(double VIN) {
             this.VIN = VIN;
         }
-        public void setOriginalColor(String originalColor) {
-            this.originalColor = originalColor;
-        }
-
         public void setYearOfProduction(int yearOfProduction) {
             this.yearOfProduction = yearOfProduction;
         }
