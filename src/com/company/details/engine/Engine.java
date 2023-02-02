@@ -1,31 +1,13 @@
 package com.company.details.engine;
 public class Engine {
-    private String name;
     private double VIN;
-    private double torque;
-    private int dateOfProduction;
+    private double torque;//крутящий момент
     private String manufacturer;
-    public Engine(String name, double torque, int dateOfProduction, String manufacturer) {
-        setTorque(torque);
-        this.dateOfProduction = dateOfProduction;
-        this.manufacturer = manufacturer;
-        this.name = name;
-    }
-    //setters
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setTorque(double torque) {
+    public Engine(double torque,String manufacturer) {
         this.torque = torque;
+        this.manufacturer = manufacturer;
     }
-    //getters
 
-
-    public String getName() {
-        return name;
-    }
 
     public double getVIN() {
         return VIN;
@@ -35,11 +17,16 @@ public class Engine {
         return torque;
     }
 
-    public int getDateOfProduction() {
-        return dateOfProduction;
-    }
-
     public String getManufacturer() {
         return manufacturer;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                ", VIN=" + VIN +
+                ", torque=" + torque +
+                ", manufacturer='" + manufacturer +
+                '}';
     }
 }

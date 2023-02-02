@@ -2,14 +2,12 @@ package com.company.details.transmission;
 
 public class Transmission {
     private int numberOfGears;
-    private double speed;
     //constructors
     public Transmission() {
     }
 
-    public Transmission(int numberOfGears, double speed) {
+    public Transmission(int numberOfGears) {
         this.numberOfGears = numberOfGears;
-        this.speed = speed;
     }
 
 
@@ -17,15 +15,16 @@ public class Transmission {
     public void setNumberOfGears(int numberOfGears) {
         this.numberOfGears = numberOfGears;
     }
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
    //getters
     public int getNumberOfGears() {
         return numberOfGears;
     }
-    public double getSpeed() {
-        return speed;
+
+    @Override
+    public String toString() {
+        return "Transmission{" +
+                "numberOfGears=" + numberOfGears +
+                '}';
     }
 }
 

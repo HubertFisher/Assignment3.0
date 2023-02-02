@@ -15,8 +15,8 @@ public class Automatic extends Transmission {
     this.manualGears = 1;
     }
 
-    public Automatic(int numberOfGears, double speed) {
-        super(numberOfGears, speed);
+    public Automatic(int numberOfGears) {
+        super(numberOfGears);
     }
 
     public void shiftUp() {
