@@ -3,9 +3,11 @@ package com.company.details.transmission.types;
 import com.company.details.transmission.Transmission;
 
 public class Automatic extends Transmission {
+
     private String gear;
     private int manualGears;
     private boolean isDriving;
+    private final String type = "Automatic";
 
     public Automatic() {
     this.gear = "Parking";
@@ -29,6 +31,10 @@ public class Automatic extends Transmission {
         }
     }
 
+    public void setGear(String gear) {
+        this.gear = gear;
+    }
+
     public void startDriving() {
         isDriving = true;
     }
@@ -36,7 +42,9 @@ public class Automatic extends Transmission {
     public void stopDriving() {
         isDriving = false;
     }
-
+    public String getType() {
+        return type;
+    }
     public String getGear() {
         return gear;
     }

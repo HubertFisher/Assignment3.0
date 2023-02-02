@@ -4,6 +4,7 @@ import com.company.details.engine.Engine;
 
 public class ICE extends Engine {
     //capacity is the var which shows the distance car can ride with full fuel tank
+    private final String type = "ICE";
     private int capacity;
     private double cylinderVolume;
     private int horsepower;
@@ -20,7 +21,9 @@ public class ICE extends Engine {
         this.horsepower = horsepower;
         this.typeOfFuel = typeOfFuel;
     }
-
+    public String getType() {
+        return type;
+    }
     public int getCapacity() {
         return capacity;
     }

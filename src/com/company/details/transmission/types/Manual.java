@@ -3,7 +3,7 @@ package com.company.details.transmission.types;
 import com.company.details.transmission.Transmission;
 
 public class Manual extends Transmission {
-
+    private final String type = "Manual";
     private int gear;
     private boolean clutchEngaged;
     private boolean isDriving;
@@ -47,6 +47,10 @@ public class Manual extends Transmission {
 
     public void stopDriving() {
         isDriving = false;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public int getGear() {
