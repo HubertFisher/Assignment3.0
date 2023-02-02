@@ -14,8 +14,8 @@ public class Manual extends Transmission {
         this.isDriving = false;
     }
 
-    public Manual(int numberOfGears, double speed) {
-        super(numberOfGears, speed);
+    public Manual(int numberOfGears) {
+        super(numberOfGears);
         this.gear = 1;
         this.clutchEngaged = false;
         this.isDriving = false;
