@@ -3,7 +3,7 @@ package com.company.details.transmission;
 public class Transmission {
     private int numberOfGears;
     private double speed;
-
+    //constructors
     public Transmission() {
     }
 
@@ -12,20 +12,20 @@ public class Transmission {
         this.speed = speed;
     }
 
-    public int getNumberOfGears() {
-        return numberOfGears;
-    }
 
+    //setters
     public void setNumberOfGears(int numberOfGears) {
         this.numberOfGears = numberOfGears;
     }
-
-    public double getSpeed() {
-        return speed;
-    }
-
     public void setSpeed(double speed) {
         this.speed = speed;
+    }
+   //getters
+    public int getNumberOfGears() {
+        return numberOfGears;
+    }
+    public double getSpeed() {
+        return speed;
     }
 }
 

@@ -6,9 +6,7 @@ public class Buyer {
         private String surname;
         private boolean gender;
 
-        public Buyer() {
-
-        }
+        public Buyer() {}
 
         public Buyer(String name, String surname, boolean gender) {
             setName(name);

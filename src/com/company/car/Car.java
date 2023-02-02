@@ -26,37 +26,34 @@ public class Car {
         this.VIN =VIN;
         this.yearOfProduction =yearOfProduction;
 
+
     }
 
 
     //setters
+
         public void setVIN(double VIN) {
             this.VIN = VIN;
         }
 
-        public void setYearOfProduction(int yearOfProduction) {
-            this.yearOfProduction = yearOfProduction;
+
+    public void setVIN(double VIN) {
+            this.VIN = VIN;
         }
-        public void setColor(String color) {
+    public void setYearOfProduction(int yearOfProduction) {this.yearOfProduction = yearOfProduction;}
+    public void setColor(String color) {
         this.color = color;
     }
-
-
     public void setPrice(double price) {
         this.price = price;
     }
-
-    public void setName(String name) {
-        this.name = name;
-
-    }
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
-    }
-
+    public void setName(String name) {this.name = name;}
+    public void setNumberOfSeats(int numberOfSeats) {this.numberOfSeats = numberOfSeats;}
 
     //getters
 
+    public String getName() {return name;}
+    public Transmission getTransmission() {return transmission;}
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
@@ -64,6 +61,7 @@ public class Car {
     public double getPrice() {
         return price;
     }
+
 
     public String getBrand() {
         return brand;
@@ -75,19 +73,14 @@ public class Car {
 
     public double getVIN() {
 
-        return VIN;
-    }
 
-        public String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public int getYearOfProduction() {
+    public int getYearOfProduction() {return yearOfProduction;}
 
-        return yearOfProduction;
-    }
-
-        public Engine getEngine() {
+    public Engine getEngine() {
         return engine;
     }
     public void startEngine() {
