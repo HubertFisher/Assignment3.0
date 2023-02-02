@@ -4,6 +4,7 @@ import com.company.details.engine.Engine;
 
 public class Electro extends Engine {
     //batteryLifeTime is the var which shows the distance car can ride with full battery
+    private final String type = "Electro";
     private int batteryLifeTime;
     private double voltage;
 
@@ -15,6 +16,10 @@ public class Electro extends Engine {
         super(name, torque, dateOfProduction, manufacturer);
         this.batteryLifeTime = batteryLifeTime;
         this.voltage = voltage;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public int getBatteryLifeTime() {
