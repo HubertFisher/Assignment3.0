@@ -5,12 +5,12 @@ import com.company.details.engine.Engine;
 import com.company.details.transmission.Transmission;
 
 public class S_class extends Car {
-    private String suspension = "Sport";
-    private boolean turboEnabled = false;
-    private boolean isDriftModeActivated = false;
+    protected String suspension = "Sport";
+    protected boolean turboEnabled = false;
+    protected boolean isDriftModeActivated = false;
 
-    public S_class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction) {
-        super(brand, model, engine, transmission, VIN, color, yearOfProduction);
+    public S_class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price, int numberOfSeats) {
+        super(brand, model, engine, transmission, VIN, color, yearOfProduction,price,numberOfSeats);
     }
 
     public void setTurboEnabled(boolean turboEnabled) {

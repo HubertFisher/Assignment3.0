@@ -5,89 +5,61 @@ import com.company.details.transmission.Transmission;
 
 public class Car {
 
-    private double price;
-    private int numberOfSeats;
-    private String name;
-    private double VIN;
-    private String color;
-    private int yearOfProduction;
-    private String brand;
-    private String model;
+    protected double price;
+    protected final int numberOfSeats;
+    protected double VIN;
+    protected String color;
+    protected final int yearOfProduction;
+    protected final String brand;
+    protected final String model;
+    protected final Engine engine;
+    protected final Transmission transmission;
 
-    private final Engine engine;
-    private final Transmission transmission;
-
-    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.transmission = transmission;
-        this.engine = engine;
-        this.VIN =VIN;
-        this.yearOfProduction =yearOfProduction;
-
+    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction,int price, int numberOfSeats) {
+        setVIN(VIN);
+        setColor(color);
+        setPrice(price);
+        this.brand=brand;
+        this.model=model;
+        this.engine=engine;
+        this.transmission=transmission;
+        this.yearOfProduction=yearOfProduction;
+        this.numberOfSeats=numberOfSeats;
 
     }
 
 
     //setters
 
-        public void setVIN(double VIN) {
-            this.VIN = VIN;
-        }
-
-
     public void setVIN(double VIN) {
             this.VIN = VIN;
         }
-    public void setYearOfProduction(int yearOfProduction) {this.yearOfProduction = yearOfProduction;}
     public void setColor(String color) {
         this.color = color;
     }
     public void setPrice(double price) {
         this.price = price;
     }
-    public void setName(String name) {this.name = name;}
-    public void setNumberOfSeats(int numberOfSeats) {this.numberOfSeats = numberOfSeats;}
 
     //getters
 
-    public String getName() {return name;}
     public Transmission getTransmission() {return transmission;}
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
-
     public double getPrice() {
         return price;
     }
-
-
     public String getBrand() {
         return brand;
     }
-
     public String getModel() {
         return model;
     }
-
-    public double getVIN() {
-
-
-    public String getColor() {
-        return color;
-    }
-
+    public double getVIN() {return  VIN;}
+    public String getColor() {return color;}
     public int getYearOfProduction() {return yearOfProduction;}
-
-    public Engine getEngine() {
-        return engine;
-    }
-    public void startEngine() {
-        System.out.println("Engine started.");
-    }
-
-    public void stopEngine() {
-        System.out.println("Engine stopped.");
-    }
+    public Engine getEngine() {return engine;}
+    public void startEngine() {System.out.println("Engine started.");}
+    public void stopEngine() {System.out.println("Engine stopped.");}
 }
