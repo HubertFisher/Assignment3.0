@@ -31,7 +31,7 @@ public class Car {
 
     //setters
 
-    public void setVIN(double VIN) {
+    private void setVIN(double VIN) {
             this.VIN = VIN;
         }
     public void setColor(String color) {
