@@ -11,12 +11,15 @@ public class Car {
     private double VIN;
     private String color;
     private int yearOfProduction;
+    private String brand;
+    private String model;
 
     private final Engine engine;
     private final Transmission transmission;
 
-    public Car(String name,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
-        this.name = name;
+    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction) {
+        this.brand = brand;
+        this.model = model;
         this.color = color;
         this.transmission = transmission;
         this.engine = engine;
@@ -29,9 +32,6 @@ public class Car {
     //setters
         public void setVIN(double VIN) {
             this.VIN = VIN;
-        }
-        public void setOriginalColor(String originalColor) {
-            this.originalColor = originalColor;
         }
 
         public void setYearOfProduction(int yearOfProduction) {
@@ -65,6 +65,14 @@ public class Car {
         return price;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
     public double getVIN() {
 
         return VIN;
@@ -81,5 +89,12 @@ public class Car {
 
         public Engine getEngine() {
         return engine;
+    }
+    public void startEngine() {
+        System.out.println("Engine started.");
+    }
+
+    public void stopEngine() {
+        System.out.println("Engine stopped.");
     }
 }
