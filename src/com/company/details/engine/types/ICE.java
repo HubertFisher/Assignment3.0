@@ -3,7 +3,7 @@ package com.company.details.engine.types;
 import com.company.details.engine.Engine;
 
 public class ICE extends Engine {
-    //capacity is the var which shows the distance car can ride with full fuel tank
+    //capacity is the var which shows  the distance car can ride with full fuel tank
     private final String type = "ICE";
     private double engineVolume;
     private int horsepower;
