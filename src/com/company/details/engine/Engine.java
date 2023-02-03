@@ -1,16 +1,10 @@
 package com.company.details.engine;
 public class Engine {
-    private double VIN;
     private double torque;//крутящий момент
     private String manufacturer;
     public Engine(double torque,String manufacturer) {
         this.torque = torque;
         this.manufacturer = manufacturer;
-    }
-
-
-    public double getVIN() {
-        return VIN;
     }
 
     public double getTorque() {
@@ -24,7 +18,6 @@ public class Engine {
     @Override
     public String toString() {
         return "Engine{" +
-                ", VIN=" + VIN +
                 ", torque=" + torque +
                 ", manufacturer='" + manufacturer +
                 '}';
