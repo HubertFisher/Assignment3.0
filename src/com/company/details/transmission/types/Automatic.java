@@ -7,7 +7,7 @@ public class Automatic extends Transmission {
     private String gear;
     private int manualGears;
     private boolean isDriving;
-    private final String type = "Automatic";
+    private final String type = "Auto";
 
     public Automatic() {
     this.gear = "Parking";

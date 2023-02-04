@@ -9,8 +9,8 @@ public class ICE extends Engine {
     private int horsepower;
     private String typeOfFuel;
 
-    public ICE(double torque, String manufacturer, double engineVolume, int horsepower, String typeOfFuel) {
-        super(torque, manufacturer);
+    public ICE(double torque, double engineVolume, int horsepower, String typeOfFuel) {
+        super(torque);
         this.engineVolume = engineVolume;
         this.horsepower = horsepower;
         this.typeOfFuel = typeOfFuel;

@@ -9,8 +9,8 @@ public class E_Class extends Car {
     protected boolean GPSEnabled;
     protected boolean sunRoofOpened;
 
-    public E_Class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price, int numberOfSeats) {
-        super(brand, model, engine, transmission, VIN, color, yearOfProduction,price,numberOfSeats);
+    public E_Class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+        super(brand, model, engine, transmission, VIN, color, yearOfProduction,price);
     }
 
     public void enableGPS() {
