@@ -56,4 +56,9 @@ public class Auto extends Transmission {
     public boolean isDriving() {
         return isDriving;
     }
+
+    @Override
+    public String toString() {
+        return "Type: Auto" + " ";
+    }
 }

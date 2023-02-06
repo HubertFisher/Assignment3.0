@@ -56,4 +56,10 @@ public class Car {
     public Engine getEngine() {return engine;}
     public void startEngine() {System.out.println("Engine started. Car");}
     public void stopEngine() {System.out.println("Engine stopped.");}
+
+    @Override
+    public String toString() {
+        return brand + " " + model + "\n" + "Price:" + price + "\n" + "VIN: " + VIN + "\n" + "Color: " + color + "\n" + "Year of Production: "+yearOfProduction
+                + "Engine: " + "\n" + engine + "\n" + "Transmission: " + "\n" + transmission;
+    }
 }
