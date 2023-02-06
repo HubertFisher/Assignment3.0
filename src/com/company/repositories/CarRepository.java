@@ -47,9 +47,8 @@ public class CarRepository implements ICarRepository {
                     transmission = new Manual(rs.getInt("gears"));
                 }
 
-                Car car = new Car(rs.getString("brand"),rs.getString("model"),engine,transmission,
+                return new Car(rs.getString("brand"),rs.getString("model"),engine,transmission,
                         rs.getInt("VIN"),rs.getString("color"),rs.getInt("years"),rs.getInt("price"));
-                return car;
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
