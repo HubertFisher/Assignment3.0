@@ -9,8 +9,8 @@ public class S_Class extends Car {
     private boolean turboEnabled = false;
     private boolean isDriftModeActivated = false;
 
-    public S_Class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price, int numberOfSeats) {
-        super(brand, model, engine, transmission, VIN, color, yearOfProduction, price, numberOfSeats);
+    public S_Class(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+        super(brand, model, engine, transmission, VIN, color, yearOfProduction, price);
     }
 
 
