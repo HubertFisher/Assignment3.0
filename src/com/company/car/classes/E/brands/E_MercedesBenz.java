@@ -6,7 +6,7 @@ import com.company.details.transmission.Transmission;
 
 public class E_MercedesBenz extends E_Class {
 
-    public E_MercedesBenz(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+    public E_MercedesBenz(String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
         super("MercedesBenz", model, engine, transmission, VIN, color, yearOfProduction, price);
     }
 }

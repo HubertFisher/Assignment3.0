@@ -5,7 +5,7 @@ import com.company.details.engine.Engine;
 import com.company.details.transmission.Transmission;
 
 public class S_Porsche extends S_Class {
-    public S_Porsche(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+    public S_Porsche(String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
         super("Porsche", model, engine, transmission, VIN, color, yearOfProduction, price);
     }
 }
