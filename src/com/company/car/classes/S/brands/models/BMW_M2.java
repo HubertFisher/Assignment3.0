@@ -7,7 +7,6 @@ import com.company.details.transmission.Transmission;
 public class BMW_M2 extends S_BMW {
 
     public BMW_M2(Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
-        super("BMW", "BMW M2", engine, transmission, VIN, color, yearOfProduction, price);
+        super("BMW", "M2", engine, transmission, VIN, color, yearOfProduction, price, 2);
     }
-
 }

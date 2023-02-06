@@ -6,7 +6,7 @@ import com.company.details.transmission.Transmission;
 
 public class E_Audi extends E_Class {
 
-    public E_Audi(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
-            super("Audi", model, engine, transmission, VIN, color, yearOfProduction, price);
+    public E_Audi(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price, int numberOfSeats) {
+            super("Audi", model, engine, transmission, VIN, color, yearOfProduction, price, numberOfSeats);
     }
 }
