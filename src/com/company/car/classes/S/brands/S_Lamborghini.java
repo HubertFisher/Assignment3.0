@@ -6,7 +6,7 @@ import com.company.details.transmission.Transmission;
 
 public class S_Lamborghini extends S_Class {
 
-    public S_Lamborghini(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price, int numberOfSeats) {
-        super("Lamborghini", model, engine, transmission, VIN, color, yearOfProduction, price, numberOfSeats);
+    public S_Lamborghini(String brand, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+        super("Lamborghini", model, engine, transmission, VIN, color, yearOfProduction, price);
     }
 }

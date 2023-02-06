@@ -8,9 +8,8 @@ public class Electro extends Engine {
     private int power;
 
 
-    public Electro(double torque,String manufacturer, int power) {
-        super(torque,manufacturer);
-
+    public Electro(double torque, int power) {
+        super(torque);
         this.power = power;
     }
 

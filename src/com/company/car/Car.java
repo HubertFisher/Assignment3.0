@@ -6,7 +6,6 @@ import com.company.details.transmission.Transmission;
 public class Car {
 
     protected double price;
-    protected final int numberOfSeats;
     protected double VIN;
     protected String color;
     protected final int yearOfProduction;
@@ -15,7 +14,7 @@ public class Car {
     protected final Engine engine;
     protected final Transmission transmission;
 
-    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction,int price, int numberOfSeats) {
+    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction,int price) {
         setVIN(VIN);
         setColor(color);
         setPrice(price);
@@ -24,8 +23,6 @@ public class Car {
         this.engine=engine;
         this.transmission=transmission;
         this.yearOfProduction=yearOfProduction;
-        this.numberOfSeats=numberOfSeats;
-
     }
 
 
@@ -44,9 +41,6 @@ public class Car {
     //getters
 
     public Transmission getTransmission() {return transmission;}
-    public int getNumberOfSeats() {
-        return numberOfSeats;
-    }
     public double getPrice() {
         return price;
     }
@@ -60,6 +54,6 @@ public class Car {
     public String getColor() {return color;}
     public int getYearOfProduction() {return yearOfProduction;}
     public Engine getEngine() {return engine;}
-    public void startEngine() {System.out.println("Engine started.");}
+    public void startEngine() {System.out.println("Engine started. Car");}
     public void stopEngine() {System.out.println("Engine stopped.");}
 }
