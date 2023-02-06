@@ -2,20 +2,20 @@ package com.company.details.transmission.types;
 
 import com.company.details.transmission.Transmission;
 
-public class Automatic extends Transmission {
+public class Auto extends Transmission {
 
     private String gear;
     private int manualGears;
     private boolean isDriving;
     private final String type = "Auto";
 
-    public Automatic() {
+    public Auto() {
     this.gear = "Parking";
     this.isDriving = false;
     this.manualGears = 1;
     }
 
-    public Automatic(int numberOfGears) {
+    public Auto(int numberOfGears) {
         super(numberOfGears);
     }
 
