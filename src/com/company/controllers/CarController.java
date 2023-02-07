@@ -16,7 +16,7 @@ public class CarController {
     public String getCar(int id) {
         Car car = repo.getCar(id);
 
-        return (car == null ? "Car was not found!" : car.toString());
+        return (car == null ? "Car were not found!" : car.toString());
     }
     public String getAllCars() {
         List<Car> cars = repo.getAllCars();
@@ -26,12 +26,19 @@ public class CarController {
     public String getCarByPrice(int start, int end) {
         List<Car> cars = repo.getCarByPrice(start,end);
 
-        return (cars == null ? "Cars was not found!" : cars.toString());
+        return (cars == null ? "Cars were not found!" : cars.toString());
     }
 
     public String getCarByYear(int start, int end) {
         List<Car> cars = repo.getCarByYear(start,end);
-
-        return (cars == null ? "Cars was not found!" : cars.toString());
+        return (cars == null ? "Cars were not found!" : cars.toString());
+    }
+    public String getCarByBrand(String brand) {
+        List<Car> cars = repo.getCarByBrand(brand);
+        return (cars == null ? "Cars were not found!" : cars.toString());
+    }
+    public String getCarByModel(String brand, String model) {
+        List<Car> cars = repo.getCarByModel(brand, model);
+        return (cars == null ? "Cars were not found!" : cars.toString());
     }
 }

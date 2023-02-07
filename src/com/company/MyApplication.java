@@ -89,8 +89,17 @@ public class MyApplication {
         System.out.println(response);
     }
     public void getCarByBrandMenu() {
+        System.out.println("Please enter car brand");
+        String brand = scanner.next();
+        String response = controller.getCarByBrand(brand);
+        System.out.println(response);
     }
     public void getCarByModelMenu() {
+        System.out.println("Please enter car brand");
+        String brand = scanner.next();
+        System.out.println("Please enter car model");
+        String model = scanner.next();
+        String response = controller.getCarByModel(brand, model);
+        System.out.println(response);
     }
-
 }
