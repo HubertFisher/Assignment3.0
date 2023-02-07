@@ -98,7 +98,7 @@ public class MyApplication {
         System.out.println("Please enter car brand");
         String brand = scanner.next();
         System.out.println("Please enter car model");
-        String model = scanner.next();
+        String model = scanner.nextLine();
         String response = controller.getCarByModel(brand, model);
         System.out.println(response);
     }

@@ -62,7 +62,7 @@ public class CarRepository implements ICarRepository {
                 car = new BMW_520d(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
             } else if (rs.getString("model").equals("540i")) {
                 car = new BMW_540i(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-            } else if (rs.getString("model").equals("M5")) {
+            } else if (rs.getString("model").equals("M5 F90")) {
                 car = new BMW_M5(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
             }
         } else if(rs.getString("brand").equals("Audi")) {
@@ -70,16 +70,16 @@ public class CarRepository implements ICarRepository {
                 car = new Audi_S7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
             } else if (rs.getString("model").equals("RS6")) {
                 car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-            } else if (rs.getString("model").equals("iX")) {
+            } else if (rs.getString("model").equals("e-tron GT")) {
                 car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
             }
         } else if(rs.getString("brand").equals("Mercedes-Benz")) {
             if (rs.getString("model").equals("E-class")) {
                 car = new MercedesBenz_E_Class(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-            } else if (rs.getString("model").equals("E-class All Terrain")) {
-                car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-            } else if (rs.getString("model").equals("iX")) {
-                car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+            } else if (rs.getString("model").equals("CLA")) {
+                car = new MercedesBenz_CLA(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+            } else if (rs.getString("model").equals("CLS")) {
+                car = new MercedesBenz_CLS(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
             }
         } else if(rs.getString("brand").equals("Porsche")) {
             if (rs.getString("model").equals("Cayman")) {
@@ -130,7 +130,7 @@ public class CarRepository implements ICarRepository {
         try {
             con = db.getConnection();
             //String sql = "SELECT * FROM cars";
-            String sql = "SELECT id,brand,model,engine_type,fuel,torque,volume,power,transmission,gears,years,price,class,VIN,color  FROM cars WHERE id=?";
+            String sql = "SELECT id,brand,model,engine_type,fuel,torque,volume,power,transmission,gears,years,price,class,vin,color  FROM cars WHERE id=?";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, id);
