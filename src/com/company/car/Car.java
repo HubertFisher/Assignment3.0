@@ -62,7 +62,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return brand + " " + model + "\n" + "ID: " + id + "\n" + "Price:" + price + "\n" + "VIN: " + VIN + "\n" + "Color: " + color + "\n" + "Year of Production: " +yearOfProduction + "\n"
-                + "Engine: " + "\n" + engine + "\n" + "Transmission: " + "\n" + transmission;
+        return brand + " " + model + "\n" + "ID: " + id + "\n" + "Price: " + price + "\n" + "VIN: " + (int)VIN + "\n" + "Color: " + color + "\n" + "Year of Production: " +yearOfProduction + "\n"
+                + "Engine: " + engine + "\n" + "Transmission: " + "\n" + transmission;
     }
 }

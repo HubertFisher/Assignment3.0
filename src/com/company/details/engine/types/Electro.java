@@ -23,7 +23,7 @@ public class Electro extends Engine {
 
     @Override
     public String toString() {
-        return "Electro: " + "\n" + "Torque: "
+        return "Electro " + "\n" + "Torque: "
                 + getTorque() +
                 ", Power: " + power;
     }

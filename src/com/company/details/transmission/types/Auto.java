@@ -59,6 +59,6 @@ public class Auto extends Transmission {
 
     @Override
     public String toString() {
-        return "Type: Auto" + " ";
+        return "Type: Auto" + ", " + "Gears: " + getNumberOfGears();
     }
 }

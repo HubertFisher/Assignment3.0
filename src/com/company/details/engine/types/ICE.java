@@ -38,7 +38,7 @@ public class ICE extends Engine {
     }
 
     public String toString() {
-        return "ICE: " + "\n" + "Torque: "
+        return "ICE " + "\n" + "Torque: "
                 + getTorque() +
                 ", Power: " + horsepower + ", Volume: " + engineVolume + ", Fuel:" + typeOfFuel;
     }
