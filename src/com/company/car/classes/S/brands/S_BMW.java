@@ -6,7 +6,7 @@ import com.company.details.transmission.Transmission;
 
 public class S_BMW extends S_Class {
 
-    public S_BMW(String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
-        super("BMW", model, engine, transmission, VIN, color, yearOfProduction, price);
+    public S_BMW(int id, String model, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+        super(id,"BMW", model, engine, transmission, VIN, color, yearOfProduction, price);
     }
 }

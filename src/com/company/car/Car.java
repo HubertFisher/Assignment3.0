@@ -4,7 +4,7 @@ import com.company.details.engine.Engine;
 import com.company.details.transmission.Transmission;
 
 public class Car {
-
+    protected int id;
     protected double price;
     protected double VIN;
     protected String color;
@@ -14,10 +14,11 @@ public class Car {
     protected final Engine engine;
     protected final Transmission transmission;
 
-    public Car(String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction,int price) {
+    public Car(int id,String brand,String model,Engine engine,Transmission transmission, double VIN, String color,int yearOfProduction,int price) {
         setVIN(VIN);
         setColor(color);
         setPrice(price);
+        this.id = id;
         this.brand=brand;
         this.model=model;
         this.engine=engine;
@@ -39,7 +40,9 @@ public class Car {
     }
 
     //getters
-
+    public int getId() {
+        return id;
+    }
     public Transmission getTransmission() {return transmission;}
     public double getPrice() {
         return price;
@@ -56,4 +59,10 @@ public class Car {
     public Engine getEngine() {return engine;}
     public void startEngine() {System.out.println("Engine started. Car");}
     public void stopEngine() {System.out.println("Engine stopped.");}
+
+    @Override
+    public String toString() {
+        return brand + " " + model + "\n" + "ID: " + id + "\n" + "Price:" + price + "\n" + "VIN: " + VIN + "\n" + "Color: " + color + "\n" + "Year of Production: "+yearOfProduction
+                + "Engine: " + "\n" + engine + "\n" + "Transmission: " + "\n" + transmission;
+    }
 }
