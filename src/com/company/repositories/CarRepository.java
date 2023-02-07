@@ -53,73 +53,73 @@ public class CarRepository implements ICarRepository {
 
                 if(rs.getString("brand").equals("BMW")) {
                     if (rs.getString("model").equals("Z4")) {
-                        car = new BMW_Z4(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_Z4(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("M2")) {
-                        car = new BMW_M2(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_M2(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("iX")) {
-                        car = new BMW_iX(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_iX(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("520d")) {
-                        car = new BMW_520d(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_520d(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("540i")) {
-                        car = new BMW_540i(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_540i(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("M5")) {
-                        car = new BMW_M5(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new BMW_M5(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Audi")) {
                     if (rs.getString("model").equals("S7")) {
-                        car = new Audi_S7(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Audi_S7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("RS6")) {
-                        car = new Audi_RS6(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("iX")) {
-                        car = new Audi_e_tron_GT(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Mercedes-Benz")) {
                     if (rs.getString("model").equals("E-class")) {
-                        car = new MercedesBenz_E_Class(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new MercedesBenz_E_Class(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("E-class All Terrain")) {
-                        car = new Audi_RS6(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("iX")) {
-                        car = new Audi_e_tron_GT(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Porsche")) {
                     if (rs.getString("model").equals("Cayman")) {
-                        car = new Porsche_Cayman(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Porsche_Cayman(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Taycan")) {
-                        car = new Porsche_Taycan(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Porsche_Taycan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("911 Turbo-S")) {
-                        car = new Porsche_911_Turbo_S(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Porsche_911_Turbo_S(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Lamborghini")) {
                     if (rs.getString("model").equals("Huracan LP 580-2")) {
-                        car = new Lamborghini_Huracan(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Lamborghini_Huracan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Urus")) {
-                        car = new Lamborghini_Urus(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Lamborghini_Urus(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Aventador LP 780-4")) {
-                        car = new Lamborghini_Aventador(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Lamborghini_Aventador(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Hyundai")) {
                     if (rs.getString("model").equals("Accent")) {
-                        car = new Hyundai_Accent(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Hyundai_Accent(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("i30")) {
-                        car = new Hyundai_i30(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Hyundai_i30(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Elantra")) {
-                        car = new Hyundai_Elantra(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Hyundai_Elantra(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Toyota")) {
                     if (rs.getString("model").equals("Auris")) {
-                        car = new Toyota_Auris(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Toyota_Auris(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Corolla")) {
-                        car = new Toyota_Corolla(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Toyota_Corolla(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Prius")) {
-                        car = new Toyota_Prius(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Toyota_Prius(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 } else if(rs.getString("brand").equals("Volkswagen")) {
                     if (rs.getString("model").equals("Golf 7")) {
-                        car = new Volkswagen_Golf_7(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Volkswagen_Golf_7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("id.3")) {
-                        car = new Volkswagen_ID3(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Volkswagen_ID3(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     } else if (rs.getString("model").equals("Polo")) {
-                        car = new Volkswagen_Polo(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                        car = new Volkswagen_Polo(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
                 }
 
@@ -144,96 +144,95 @@ public class CarRepository implements ICarRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT id,name,surname,gender FROM users";
+            String sql = "SELECT id,brand,model,engine_type,fuel,torque,volume,power,transmission,gears,years,price,class,VIN,color  FROM cars WHERE id=?";
             Statement st = con.createStatement();
 
             ResultSet rs = st.executeQuery(sql);
             List<Car> cars = new LinkedList<>();
             while (rs.next()) {
-                    if (rs.getString("engine_type").equals("ICE")) {
-                        engine = new ICE(rs.getDouble("torque"), rs.getDouble("volume"), rs.getInt("power"), rs.getString("fuel"));
-                    } else if (rs.getString("engine_type").equals("Electro")) {
-                        engine = new Electro(rs.getDouble("torque"), rs.getInt("power"));
-                    }
+                if(rs.getString("engine_type").equals("ICE")) {
+                    engine = new ICE(rs.getDouble("torque"),rs.getDouble("volume"),rs.getInt("power"),rs.getString("fuel"));
+                } else if(rs.getString("engine_type").equals("Electro")) {
+                    engine = new Electro(rs.getDouble("torque"),rs.getInt("power"));
+                }
 
-                    if (rs.getString("transmission").equals("Auto")) {
-                        transmission = new Auto(rs.getInt("gears"));
-                    } else if (rs.getString("transmission").equals("Manual")) {
-                        transmission = new Manual(rs.getInt("gears"));
-                    }
+                if(rs.getString("transmission").equals("Auto")) {
+                    transmission = new Auto(rs.getInt("gears"));
+                } else if(rs.getString("transmission").equals("Manual")) {
+                    transmission = new Manual(rs.getInt("gears"));
+                }
 
-                    if (rs.getString("brand").equals("BMW")) {
-                        if (rs.getString("model").equals("Z4")) {
-                            car = new BMW_Z4(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("M2")) {
-                            car = new BMW_M2(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("iX")) {
-                            car = new BMW_iX(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("520d")) {
-                            car = new BMW_520d(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("540i")) {
-                            car = new BMW_540i(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("M5")) {
-                            car = new BMW_M5(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Audi")) {
-                        if (rs.getString("model").equals("S7")) {
-                            car = new Audi_S7(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("RS6")) {
-                            car = new Audi_RS6(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("iX")) {
-                            car = new Audi_e_tron_GT(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Mercedes-Benz")) {
-                        if (rs.getString("model").equals("E-class")) {
-                            car = new MercedesBenz_E_Class(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("E-class All Terrain")) {
-                            car = new Audi_RS6(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("iX")) {
-                            car = new Audi_e_tron_GT(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Porsche")) {
-                        if (rs.getString("model").equals("Cayman")) {
-                            car = new Porsche_Cayman(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Taycan")) {
-                            car = new Porsche_Taycan(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("911 Turbo-S")) {
-                            car = new Porsche_911_Turbo_S(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Lamborghini")) {
-                        if (rs.getString("model").equals("Huracan LP 580-2")) {
-                            car = new Lamborghini_Huracan(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Urus")) {
-                            car = new Lamborghini_Urus(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Aventador LP 780-4")) {
-                            car = new Lamborghini_Aventador(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Hyundai")) {
-                        if (rs.getString("model").equals("Accent")) {
-                            car = new Hyundai_Accent(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("i30")) {
-                            car = new Hyundai_i30(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Elantra")) {
-                            car = new Hyundai_Elantra(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Toyota")) {
-                        if (rs.getString("model").equals("Auris")) {
-                            car = new Toyota_Auris(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Corolla")) {
-                            car = new Toyota_Corolla(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Prius")) {
-                            car = new Toyota_Prius(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
-                    } else if (rs.getString("brand").equals("Volkswagen")) {
-                        if (rs.getString("model").equals("Golf 7")) {
-                            car = new Volkswagen_Golf_7(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("id.3")) {
-                            car = new Volkswagen_ID3(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        } else if (rs.getString("model").equals("Polo")) {
-                            car = new Volkswagen_Polo(engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
-                        }
+                if(rs.getString("brand").equals("BMW")) {
+                    if (rs.getString("model").equals("Z4")) {
+                        car = new BMW_Z4(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("M2")) {
+                        car = new BMW_M2(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new BMW_iX(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("520d")) {
+                        car = new BMW_520d(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("540i")) {
+                        car = new BMW_540i(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("M5")) {
+                        car = new BMW_M5(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
                     }
-
+                } else if(rs.getString("brand").equals("Audi")) {
+                    if (rs.getString("model").equals("S7")) {
+                        car = new Audi_S7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("RS6")) {
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Mercedes-Benz")) {
+                    if (rs.getString("model").equals("E-class")) {
+                        car = new MercedesBenz_E_Class(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("E-class All Terrain")) {
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Porsche")) {
+                    if (rs.getString("model").equals("Cayman")) {
+                        car = new Porsche_Cayman(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Taycan")) {
+                        car = new Porsche_Taycan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("911 Turbo-S")) {
+                        car = new Porsche_911_Turbo_S(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Lamborghini")) {
+                    if (rs.getString("model").equals("Huracan LP 580-2")) {
+                        car = new Lamborghini_Huracan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Urus")) {
+                        car = new Lamborghini_Urus(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Aventador LP 780-4")) {
+                        car = new Lamborghini_Aventador(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Hyundai")) {
+                    if (rs.getString("model").equals("Accent")) {
+                        car = new Hyundai_Accent(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("i30")) {
+                        car = new Hyundai_i30(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Elantra")) {
+                        car = new Hyundai_Elantra(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Toyota")) {
+                    if (rs.getString("model").equals("Auris")) {
+                        car = new Toyota_Auris(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Corolla")) {
+                        car = new Toyota_Corolla(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Prius")) {
+                        car = new Toyota_Prius(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Volkswagen")) {
+                    if (rs.getString("model").equals("Golf 7")) {
+                        car = new Volkswagen_Golf_7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("id.3")) {
+                        car = new Volkswagen_ID3(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Polo")) {
+                        car = new Volkswagen_Polo(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                }
                 cars.add(car);
             }
 
@@ -249,6 +248,144 @@ public class CarRepository implements ICarRepository {
                 throwables.printStackTrace();
             }
         }
+        return null;
+    }
+    @Override
+    public List<Car> getCarByPrice(int start, int end) {
+        Connection con = null;
+        try {
+            con = db.getConnection();
+            String sql = "SELECT id,name,surname,gender FROM users";
+            Statement st = con.createStatement();
+
+            ResultSet rs = st.executeQuery(sql);
+            List<Car> cars = new LinkedList<>();
+            while (rs.next()) {
+                if (rs.getString("engine_type").equals("ICE")) {
+                    engine = new ICE(rs.getDouble("torque"), rs.getDouble("volume"), rs.getInt("power"), rs.getString("fuel"));
+                } else if (rs.getString("engine_type").equals("Electro")) {
+                    engine = new Electro(rs.getDouble("torque"), rs.getInt("power"));
+                }
+
+                if (rs.getString("transmission").equals("Auto")) {
+                    transmission = new Auto(rs.getInt("gears"));
+                } else if (rs.getString("transmission").equals("Manual")) {
+                    transmission = new Manual(rs.getInt("gears"));
+                }
+
+                if(rs.getString("engine_type").equals("ICE")) {
+                    engine = new ICE(rs.getDouble("torque"),rs.getDouble("volume"),rs.getInt("power"),rs.getString("fuel"));
+                } else if(rs.getString("engine_type").equals("Electro")) {
+                    engine = new Electro(rs.getDouble("torque"),rs.getInt("power"));
+                }
+
+                if(rs.getString("transmission").equals("Auto")) {
+                    transmission = new Auto(rs.getInt("gears"));
+                } else if(rs.getString("transmission").equals("Manual")) {
+                    transmission = new Manual(rs.getInt("gears"));
+                }
+
+                if(rs.getString("brand").equals("BMW")) {
+                    if (rs.getString("model").equals("Z4")) {
+                        car = new BMW_Z4(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("M2")) {
+                        car = new BMW_M2(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new BMW_iX(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("520d")) {
+                        car = new BMW_520d(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("540i")) {
+                        car = new BMW_540i(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("M5")) {
+                        car = new BMW_M5(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Audi")) {
+                    if (rs.getString("model").equals("S7")) {
+                        car = new Audi_S7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("RS6")) {
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Mercedes-Benz")) {
+                    if (rs.getString("model").equals("E-class")) {
+                        car = new MercedesBenz_E_Class(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("E-class All Terrain")) {
+                        car = new Audi_RS6(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("iX")) {
+                        car = new Audi_e_tron_GT(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Porsche")) {
+                    if (rs.getString("model").equals("Cayman")) {
+                        car = new Porsche_Cayman(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Taycan")) {
+                        car = new Porsche_Taycan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("911 Turbo-S")) {
+                        car = new Porsche_911_Turbo_S(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Lamborghini")) {
+                    if (rs.getString("model").equals("Huracan LP 580-2")) {
+                        car = new Lamborghini_Huracan(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Urus")) {
+                        car = new Lamborghini_Urus(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Aventador LP 780-4")) {
+                        car = new Lamborghini_Aventador(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Hyundai")) {
+                    if (rs.getString("model").equals("Accent")) {
+                        car = new Hyundai_Accent(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("i30")) {
+                        car = new Hyundai_i30(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Elantra")) {
+                        car = new Hyundai_Elantra(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Toyota")) {
+                    if (rs.getString("model").equals("Auris")) {
+                        car = new Toyota_Auris(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Corolla")) {
+                        car = new Toyota_Corolla(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Prius")) {
+                        car = new Toyota_Prius(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                } else if(rs.getString("brand").equals("Volkswagen")) {
+                    if (rs.getString("model").equals("Golf 7")) {
+                        car = new Volkswagen_Golf_7(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("id.3")) {
+                        car = new Volkswagen_ID3(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    } else if (rs.getString("model").equals("Polo")) {
+                        car = new Volkswagen_Polo(rs.getInt("id"), engine, transmission, rs.getInt("VIN"), rs.getString("color"), rs.getInt("years"), rs.getInt("price"));
+                    }
+                }
+                cars.add(car);
+            }
+
+            return cars;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return null;
+    }
+    @Override
+    public List<Car> getCarByYear(int start, int end){
+
+        return null;
+    }
+
+    @Override
+    public List<Car> getCarByBrand(String brand) {
+        return null;
+    }
+
+    @Override
+    public List<Car> getCarByModel(String brand, String model) {
         return null;
     }
 }

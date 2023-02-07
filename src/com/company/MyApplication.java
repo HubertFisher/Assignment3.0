@@ -17,22 +17,30 @@ public class MyApplication {
     public void start() {
         while (true) {
             System.out.println();
-            System.out.println("Welcome to My Application");
             System.out.println("Select option:");
             System.out.println("1. Get all users");
-            System.out.println("2. Get user by id");
-            System.out.println("3. Create user");
+            System.out.println("2. Get car by id");
+            System.out.println("3. Get car by price");
+            System.out.println("4. Get car by year of production");
+            System.out.println("5. Get car by brand");
+            System.out.println("6. Get car by model");
             System.out.println("0. Exit");
             System.out.println();
             try {
-                System.out.print("Enter option (1-3): ");
+                System.out.print("Enter option (1-6): ");
                 int option = scanner.nextInt();
                 if (option == 1) {
-                    getAllUsersMenu();
+                    getAllCarsMenu();
                 } else if (option == 2) {
-                    getUserByIdMenu();
+                    getCarByIdMenu();
                 } else if (option == 3) {
-                    createUserMenu();
+                    getCarByPriceMenu();
+                } else if (option == 4) {
+                    getCarByYearMenu();
+                } else if (option == 5) {
+                    getCarByBrandMenu();
+                } else if (option == 6) {
+                    getCarByModelMenu();
                 } else {
                     break;
                 }
@@ -49,28 +57,40 @@ public class MyApplication {
         }
     }
 
-    public void getAllUsersMenu() {
-        String response = controller.getAllUsers();
+    public void getAllCarsMenu() {
+        String response = controller.getAllCars();
         System.out.println(response);
     }
 
-    public void getUserByIdMenu() {
+    public void getCarByIdMenu() {
         System.out.println("Please enter id");
 
         int id = scanner.nextInt();
-        String response = controller.getUser(id);
+        String response = controller.getCar(id);
         System.out.println(response);
     }
 
-    public void createUserMenu() {
-        System.out.println("Please enter name");
-        String name = scanner.next();
-        System.out.println("Please enter surname");
-        String surname = scanner.next();
-        System.out.println("Please enter gender (male/female)");
-        String gender = scanner.next();
-
-        String response = controller.createUser(name, surname, gender);
+    public void getCarByPriceMenu() {
+        System.out.println("Please enter price range");
+        System.out.println("Please enter start price: ");
+        int start = scanner.nextInt();
+        System.out.println("Please enter end price: ");
+        int end = scanner.nextInt();
+        String response = controller.getCarByPrice(start,end);
         System.out.println(response);
     }
+    public void getCarByYearMenu() {
+        System.out.println("Please enter year range");
+        System.out.println("Please enter start year: ");
+        int start = scanner.nextInt();
+        System.out.println("Please enter end year: ");
+        int end = scanner.nextInt();
+        String response = controller.getCarByYear(start,end);
+        System.out.println(response);
+    }
+    public void getCarByBrandMenu() {
+    }
+    public void getCarByModelMenu() {
+    }
+
 }

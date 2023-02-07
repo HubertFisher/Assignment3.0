@@ -1,6 +1,7 @@
 package com.company.controllers;
 
 
+import com.company.car.Car;
 import com.company.repositories.interfaces.ICarRepository;
 
 import java.util.List;
@@ -12,15 +13,25 @@ public class CarController {
         this.repo = repo;
     }
 
-    public String getUser(int id) {
-        User user = repo.getUser(id);
+    public String getCar(int id) {
+        Car car = repo.getCar(id);
 
-        return (user == null ? "User was not found!" : user.toString());
+        return (car == null ? "Car was not found!" : car.toString());
+    }
+    public String getAllCars() {
+        List<Car> cars = repo.getAllCars();
+
+        return cars.toString();
+    }
+    public String getCarByPrice(int start, int end) {
+        List<Car> cars = repo.getCarByPrice(start,end);
+
+        return (cars == null ? "Cars was not found!" : cars.toString());
     }
 
-    public String getAllUsers() {
-        List<User> users = repo.getAllUsers();
+    public String getCarByYear(int start, int end) {
+        List<Car> cars = repo.getCarByYear(start,end);
 
-        return users.toString();
+        return (cars == null ? "Cars was not found!" : cars.toString());
     }
 }

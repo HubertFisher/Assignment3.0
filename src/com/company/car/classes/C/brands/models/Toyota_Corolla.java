@@ -5,7 +5,7 @@ import com.company.details.engine.Engine;
 import com.company.details.transmission.Transmission;
 
 public class Toyota_Corolla extends C_Toyota {
-    public Toyota_Corolla(Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
-        super("Corolla", engine, transmission, VIN, color, yearOfProduction, price);
+    public Toyota_Corolla(int id, Engine engine, Transmission transmission, double VIN, String color, int yearOfProduction, int price) {
+        super(id,"Corolla", engine, transmission, VIN, color, yearOfProduction, price);
     }
 }
