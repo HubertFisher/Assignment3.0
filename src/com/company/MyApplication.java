@@ -18,7 +18,7 @@ public class MyApplication {
         while (true) {
             System.out.println();
             System.out.println("Select option:");
-            System.out.println("1. Get all users");
+            System.out.println("1. Get all cars");
             System.out.println("2. Get car by id");
             System.out.println("3. Get car by price");
             System.out.println("4. Get car by year of production");
