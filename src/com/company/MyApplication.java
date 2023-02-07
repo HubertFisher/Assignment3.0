@@ -58,8 +58,7 @@ public class MyApplication {
     }
 
     public void getAllCarsMenu() {
-        String response = controller.getAllCars();
-        System.out.println(response);
+        controller.getAllCars();
     }
 
     public void getCarByIdMenu() {
@@ -76,8 +75,8 @@ public class MyApplication {
         int start = scanner.nextInt();
         System.out.println("Please enter end price: ");
         int end = scanner.nextInt();
-        String response = controller.getCarByPrice(start,end);
-        System.out.println(response);
+        controller.getCarByPrice(start, end);
+
     }
     public void getCarByYearMenu() {
         System.out.println("Please enter year range");
@@ -85,21 +84,20 @@ public class MyApplication {
         int start = scanner.nextInt();
         System.out.println("Please enter end year: ");
         int end = scanner.nextInt();
-        String response = controller.getCarByYear(start,end);
-        System.out.println(response);
+        controller.getCarByYear(start,end);
+
     }
     public void getCarByBrandMenu() {
         System.out.println("Please enter car brand");
         String brand = scanner.next();
-        String response = controller.getCarByBrand(brand);
-        System.out.println(response);
+       controller.getCarByBrand(brand);
+
     }
     public void getCarByModelMenu() {
         System.out.println("Please enter car brand");
         String brand = scanner.next();
         System.out.println("Please enter car model");
         String model = scanner.nextLine();
-        String response = controller.getCarByModel(brand, model);
-        System.out.println(response);
+        controller.getCarByModel(brand, model);
     }
 }

@@ -18,27 +18,56 @@ public class CarController {
 
         return (car == null ? "Car were not found!" : car.toString());
     }
-    public String getAllCars() {
+    public void getAllCars() {
         List<Car> cars = repo.getAllCars();
-
-        return cars.toString();
+        if (cars==null){
+            System.out.println("Cars were not found!");
+        }else {
+            for(Car car:cars){
+                System.out.println(car.toString());
+            }
+        }
     }
-    public String getCarByPrice(int start, int end) {
+    public void getCarByPrice(int start, int end) {
         List<Car> cars = repo.getCarByPrice(start,end);
 
-        return (cars == null ? "Cars were not found!" : cars.toString());
+        if (cars==null){
+            System.out.println("Cars were not found!");
+        }else {
+            for(Car car:cars){
+                System.out.println(car.toString());
+            }
+        }
     }
 
-    public String getCarByYear(int start, int end) {
+    public void getCarByYear(int start, int end) {
         List<Car> cars = repo.getCarByYear(start,end);
-        return (cars == null ? "Cars were not found!" : cars.toString());
+        if (cars==null){
+            System.out.println("Cars were not found!");
+        }else {
+            for(Car car:cars){
+                System.out.println(car.toString());
+            }
+        }
     }
-    public String getCarByBrand(String brand) {
+    public void getCarByBrand(String brand) {
         List<Car> cars = repo.getCarByBrand(brand);
-        return (cars == null ? "Cars were not found!" : cars.toString());
+        if (cars==null){
+            System.out.println("Cars were not found!");
+        }else {
+            for(Car car:cars){
+                System.out.println(car.toString());
+            }
+        }
     }
-    public String getCarByModel(String brand, String model) {
+    public void getCarByModel(String brand, String model) {
         List<Car> cars = repo.getCarByModel(brand, model);
-        return (cars == null ? "Cars were not found!" : cars.toString());
+        if (cars==null){
+            System.out.println("Cars were not found!");
+        }else {
+            for(Car car:cars){
+            System.out.println(car.toString());
+            }
+        }
     }
 }
