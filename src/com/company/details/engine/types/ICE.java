@@ -37,5 +37,9 @@ public class ICE extends Engine {
         this.typeOfFuel = typeOfFuel;
     }
 
-
+    public String toString() {
+        return "ICE: " + "\n" + "Torque: "
+                + getTorque() +
+                ", Power: " + horsepower + ", Volume: " + engineVolume + ", Fuel:" + typeOfFuel;
+    }
 }
