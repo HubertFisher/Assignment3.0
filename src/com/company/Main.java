@@ -1,16 +1,18 @@
 package com.company;
 
-import com.company.car.Car;
-import com.company.car.classes.S.brands.models.BMW_M2;
+import java.sql.*;
 import com.company.controllers.CarController;
 import com.company.data.PostgresDB;
 import com.company.data.interfaces.IDB;
-import com.company.details.engine.Engine;
-import com.company.details.transmission.Transmission;
+
 import com.company.repositories.CarRepository;
 import com.company.repositories.interfaces.ICarRepository;
 
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 
 public class Main {
     public static void main(String[] args){
