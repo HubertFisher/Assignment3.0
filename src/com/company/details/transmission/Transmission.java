@@ -19,12 +19,6 @@ public class Transmission {
     public int getNumberOfGears() {
         return numberOfGears;
     }
-
-    @Override
-    public String toString() {
-        return "Transmission{" +
-                "numberOfGears=" + numberOfGears +
-                '}';
-    }
+    
 }
 

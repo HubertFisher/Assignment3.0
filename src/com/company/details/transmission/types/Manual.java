@@ -66,6 +66,6 @@ public class Manual extends Transmission {
     }
     @Override
     public String toString() {
-        return "Type: Auto" + ", " + "Gears: " + getNumberOfGears();
+        return "Type: Manual" + ", " + "Gears: " + getNumberOfGears();
     }
 }

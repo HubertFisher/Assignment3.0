@@ -9,10 +9,4 @@ public class Engine {
         return torque;
     }
 
-    @Override
-    public String toString() {
-        return "Engine{" +
-                ", torque=" + torque +
-                '}';
-    }
 }
