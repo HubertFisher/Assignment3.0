@@ -13,10 +13,9 @@ public class CarController {
         this.repo = repo;
     }
 
-    public String getCar(int id) {
+    public Car getCar(int id) {
         Car car = repo.getCar(id);
-
-        return (car == null ? "Car were not found!" : car.toString());
+        return (car);
     }
     public void getAllCars() {
         List<Car> cars = repo.getAllCars();
