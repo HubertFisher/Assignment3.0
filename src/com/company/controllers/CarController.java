@@ -49,7 +49,8 @@ public class CarController {
             }
         }
     }
-    public void getCarByBrand(String brand) {
+    public void getCarByBrand(int brand) {
+
         List<Car> cars = repo.getCarByBrand(brand);
         if (cars==null){
             System.out.println("Cars were not found!");
@@ -59,7 +60,7 @@ public class CarController {
             }
         }
     }
-    public void getCarByModel(String brand, String model) {
+    public void getCarByModel(int brand, int model) {
         List<Car> cars = repo.getCarByModel(brand, model);
         if (cars==null){
             System.out.println("Cars were not found!");

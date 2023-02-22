@@ -253,7 +253,18 @@ public class CarRepository implements ICarRepository {
     }
 
     @Override
-    public List<Car> getCarByBrand(String brand) {
+    public List<Car> getCarByBrand(int brandId) {
+        String brand = switch (brandId) {
+            case 1 -> "BMW";
+            case 2 -> "Hyundai";
+            case 3 -> "Toyota";
+            case 4 -> "Volkswagen";
+            case 5 -> "Audi";
+            case 6 -> "Mercedes-Benz";
+            case 7 -> "Lamborghini";
+            case 8 -> "Porsche";
+            default -> "";
+        };
         Connection con = null;
         try {
             con = db.getConnection();
@@ -286,7 +297,90 @@ public class CarRepository implements ICarRepository {
     }
 
     @Override
-    public List<Car> getCarByModel(String brand, String model) {
+    public List<Car> getCarByModel(int brandId, int modelId) {
+        String brand = switch (brandId) {
+            case 1 -> "BMW";
+            case 2 -> "Hyundai";
+            case 3 -> "Toyota";
+            case 4 -> "Volkswagen";
+            case 5 -> "Audi";
+            case 6 -> "Mercedes-Benz";
+            case 7 -> "Lamborghini";
+            case 8 -> "Porsche";
+            default -> "";
+        };
+        String model="";
+        switch (brand){
+            case "":
+                model="";
+             case "Audi":
+                 model = switch (modelId) {
+                     case 1 -> "RS6";
+                     case 2 -> "S7";
+                     case 3-> "e-tron GT";
+                     default -> model;
+                 };
+                 break;
+             case "BMW":
+                 model = switch (modelId) {
+                     case 1 -> "iX";
+                     case 2 -> "Z4";
+                     case 3-> "M2";
+                     case 4-> "520d";
+                     case 5-> "540i";
+                     case 6-> "M5 F90";
+                     default -> model;
+                 };
+                 break;
+             case "Hyundai":
+                 model = switch (modelId) {
+                     case 1 -> "Accent";
+                     case 2 -> "Elantra";
+                     case 3-> "i30";
+                     default -> model;
+                 };
+                 break;
+             case "Lamborghini":
+                 model = switch (modelId) {
+                     case 1 -> "Aventador LP 780-4";
+                     case 2 -> "Huracan LP 580-2";
+                     case 3-> "Urus";
+                     default -> model;
+                 };
+                 break;
+             case "Mercedes-Benz":
+                 model = switch (modelId) {
+                     case 1 -> "CLS";
+                     case 2 -> "CLA";
+                     case 3-> "E-class";
+                     default -> model;
+                 };
+                 break;
+             case "Porsche":
+                 model = switch (modelId) {
+                     case 1 -> "Cayman";
+                     case 2 -> "911 Turbo-S";
+                     case 3-> "Taycan";
+                     default -> model;
+                 };
+                 break;
+             case "Toyota":
+                 model = switch (modelId) {
+                     case 1 -> "Auris";
+                     case 2 -> "Corolla";
+                     case 3-> "Prius";
+                     default -> model;
+                 };
+                 break;
+             case "Volkswagen":
+                 model = switch (modelId) {
+                     case 1 -> "Polo";
+                     case 2 -> "id.3";
+                     case 3-> "Golf 7";
+                     default -> model;
+                 };
+         };
+        System.out.println(model+" model "+brand+" brand ");
         Connection con = null;
         try {
             con = db.getConnection();

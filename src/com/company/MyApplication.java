@@ -101,15 +101,93 @@ public class MyApplication {
 
     }
     public void getCarByBrandMenu() {
-        System.out.println("Please enter car brand");
-        String brand = scanner.next();
-       controller.getCarByBrand(brand);
+        System.out.println("""
+                Please choose car brand in the list:
+                1.BMW
+                2.Hyundai
+                3.Toyota
+                4.Volkswagen
+                5.Audi
+                6.Mercedes-Benz
+                7.Lamborghini
+                8.Porsche""");
+        int brand = scanner.nextInt();
+        controller.getCarByBrand(brand);
     }
     public void getCarByModelMenu() {
-        System.out.println("Please enter car brand");
-        String brand = scanner.next();
-        System.out.println("Please enter car model");
-        String model = scanner.next();
+        System.out.println("""
+                Please choose car brand in the list:
+                1.BMW
+                2.Hyundai
+                3.Toyota
+                4.Volkswagen
+                5.Audi
+                6.Mercedes-Benz
+                7.Lamborghini
+                8.Porsche""");
+        int brand = scanner.nextInt();
+        switch (brand){
+            case 1:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.iX
+                      2.Z4
+                      3.M2
+                      4.520d
+                      5.540i
+                      6.M5 F90""");
+                break;
+            case 2:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.Accent
+                      2.Elantra
+                      3.i30""");
+                break;
+            case 3:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.Auris
+                      2.Corolla
+                      3.Prius""");
+                break;
+            case 4:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.Polo
+                      2.id.3
+                      3.Golf 7""");
+                break;
+            case 5:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.RS6
+                      2.S7
+                      3.e-tron GT""");
+                break;
+            case 6:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.CLS
+                      2.CLA
+                      3.E-class""");
+                break;
+            case 7:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.Aventador LP 780-4
+                      2.Huracan LP 580-2
+                      3.Urus""");
+                break;
+            case 8:
+                System.out.println("""
+                      Please choose car model in the list:
+                      1.Cayman
+                      2.911 Turbo-S
+                      3.Taycan""");
+                break;
+        }
+        int model = scanner.nextInt();
         controller.getCarByModel(brand, model);
     }
     public void addCar(Car car) {

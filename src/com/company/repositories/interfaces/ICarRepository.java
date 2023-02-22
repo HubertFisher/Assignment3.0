@@ -9,7 +9,7 @@ public interface ICarRepository {
     List<Car> getAllCars();
     List<Car> getCarByPrice(int start, int end);
     List<Car> getCarByYear(int start, int end);
-    List<Car> getCarByBrand(String brand);
-    List<Car> getCarByModel(String brand, String model);
+    List<Car> getCarByBrand(int brand);
+    List<Car> getCarByModel(int brand, int model);
 
 }
