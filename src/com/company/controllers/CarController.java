@@ -4,6 +4,7 @@ package com.company.controllers;
 import com.company.car.Car;
 import com.company.repositories.interfaces.ICarRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarController {
@@ -60,8 +61,29 @@ public class CarController {
             }
         }
     }
-    public void getCarByModel(int brand, int model) {
-        List<Car> cars = repo.getCarByModel(brand, model);
+    public void getCarByModel(int brand, int[] models) {
+        int counter=0;
+        for (int model: models) {
+            if (model!=0)
+                counter++;
+        }
+         List<Car> cars=null;
+        switch (counter){
+            case 1:
+                cars=repo.getCarByModel(brand,models[0]);
+                break;
+            case 2:
+                cars = repo.getCarByModel(brand, models[0]);
+                cars.addAll(repo.getCarByModel(brand,models[1]));
+                break;
+            case 3:
+                cars = repo.getCarByModel(brand, models[0]);
+                cars.addAll(repo.getCarByModel(brand,models[1]));
+                cars.addAll(repo.getCarByModel(brand,models[2]));
+                break;
+
+        }
+
         if (cars==null){
             System.out.println("Cars were not found!");
         }else {

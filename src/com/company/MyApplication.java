@@ -126,69 +126,66 @@ public class MyApplication {
                 7.Lamborghini
                 8.Porsche""");
         int brand = scanner.nextInt();
-        switch (brand){
-            case 1:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.iX
-                      2.Z4
-                      3.M2
-                      4.520d
-                      5.540i
-                      6.M5 F90""");
-                break;
-            case 2:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.Accent
-                      2.Elantra
-                      3.i30""");
-                break;
-            case 3:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.Auris
-                      2.Corolla
-                      3.Prius""");
-                break;
-            case 4:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.Polo
-                      2.id.3
-                      3.Golf 7""");
-                break;
-            case 5:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.RS6
-                      2.S7
-                      3.e-tron GT""");
-                break;
-            case 6:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.CLS
-                      2.CLA
-                      3.E-class""");
-                break;
-            case 7:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.Aventador LP 780-4
-                      2.Huracan LP 580-2
-                      3.Urus""");
-                break;
-            case 8:
-                System.out.println("""
-                      Please choose car model in the list:
-                      1.Cayman
-                      2.911 Turbo-S
-                      3.Taycan""");
-                break;
+        switch (brand) {
+            case 1 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.iX
+                    2.Z4
+                    3.M2
+                    4.520d
+                    5.540i
+                    6.M5 F90""");
+            case 2 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.Accent
+                    2.Elantra
+                    3.i30""");
+            case 3 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.Auris
+                    2.Corolla
+                    3.Prius""");
+            case 4 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.Polo
+                    2.id.3
+                    3.Golf 7""");
+            case 5 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.RS6
+                    2.S7
+                    3.e-tron GT""");
+            case 6 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.CLS
+                    2.CLA
+                    3.E-class""");
+            case 7 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.Aventador LP 780-4
+                    2.Huracan LP 580-2
+                    3.Urus""");
+            case 8 -> System.out.println("""
+                    Please choose car model or models in the list:
+                    1.Cayman
+                    2.911 Turbo-S
+                    3.Taycan""");
         }
-        int model = scanner.nextInt();
-        controller.getCarByModel(brand, model);
+        int[] modelId = new int[3];
+        int counter=0;
+        while (counter<3){
+            modelId[counter]=scanner.nextInt();
+
+            if (modelId[counter]==0)
+                break;
+            System.out.println("List of selected models:");
+            for (int i = 0; i <=counter ; i++) {
+                System.out.print(defineCarBrandAndModel(brand,modelId[i])+"\n");
+            }
+            System.out.println("Enter 0 to start searching or select another model ");
+            counter++;
+        }
+        controller.getCarByModel(brand, modelId);
     }
     public void addCar(Car car) {
         cars.add(car);
@@ -245,5 +242,91 @@ public class MyApplication {
             }
             System.out.println("*************************");
         }
+    }
+    private String defineCarBrandAndModel(int brandId,int modelId){
+        String[] BrandAndModel = new String[2];
+        BrandAndModel[0]= switch (brandId) {
+            case 1 -> "BMW";
+            case 2 -> "Hyundai";
+            case 3 -> "Toyota";
+            case 4 -> "Volkswagen";
+            case 5 -> "Audi";
+            case 6 -> "Mercedes-Benz";
+            case 7 -> "Lamborghini";
+            case 8 -> "Porsche";
+            default -> "";
+        };
+
+        switch (BrandAndModel[0]){
+            case "":
+                BrandAndModel[1]="";
+            case "Audi":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "RS6";
+                    case 2 -> "S7";
+                    case 3-> "e-tron GT";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "BMW":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "iX";
+                    case 2 -> "Z4";
+                    case 3-> "M2";
+                    case 4-> "520d";
+                    case 5-> "540i";
+                    case 6-> "M5 F90";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Hyundai":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "Accent";
+                    case 2 -> "Elantra";
+                    case 3-> "i30";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Lamborghini":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "Aventador LP 780-4";
+                    case 2 -> "Huracan LP 580-2";
+                    case 3-> "Urus";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Mercedes-Benz":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "CLS";
+                    case 2 -> "CLA";
+                    case 3-> "E-class";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Porsche":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "Cayman";
+                    case 2 -> "911 Turbo-S";
+                    case 3-> "Taycan";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Toyota":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "Auris";
+                    case 2 -> "Corolla";
+                    case 3-> "Prius";
+                    default ->  BrandAndModel[1];
+                };
+                break;
+            case "Volkswagen":
+                BrandAndModel[1] = switch (modelId) {
+                    case 1 -> "Polo";
+                    case 2 -> "id.3";
+                    case 3-> "Golf 7";
+                    default ->  BrandAndModel[1];
+                };
+        };
+        return BrandAndModel[1];
     }
 }
