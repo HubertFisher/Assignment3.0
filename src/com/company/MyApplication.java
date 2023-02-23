@@ -73,12 +73,16 @@ public class MyApplication {
         System.out.println("Please enter id");
         int id = scanner.nextInt();
         Car car = controller.getCar(id);
-        System.out.println(car.toString());
-        System.out.println("To add this car to cart press 1, else 0");
-        int choice = scanner.nextInt();
-        if(choice==1){
-        cars.add(car);
-            System.out.println(car.getBrand()+" "+car.getModel()+" successfully added to cart");
+        if(car!=null){
+            System.out.println(car.toString());
+            System.out.println("To add this car to cart press 1, else 0");
+            int choice = scanner.nextInt();
+            if(choice==1){
+                cars.add(car);
+                System.out.println(car.getBrand()+" "+car.getModel()+" successfully added to cart");
+            }
+        } else {
+            System.out.println("Car was not found!");
         }
     }
 
